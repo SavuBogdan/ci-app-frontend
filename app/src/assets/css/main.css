@@ -1,0 +1,83 @@
+body {
+    background-color: #1D1D44;
+}
+
+#mainContainer {
+    width: 100vw;
+    height: 100vh;
+}
+
+.repo-list {
+    width: 100%;
+}
+
+.repo-name {
+    font-size: xx-large;
+}
+
+.card {
+    background-color: #535886;
+    color: #fff;
+    max-width: 1000px;
+}
+
+.card-header {
+    background-color: #2e2e4f;
+    color: #fff;
+}
+
+.card-body {
+    background-color: #36365e;
+    color: #fff;
+}
+
+.view-builds-button {
+    background-color: #1f1f36;
+    color: #fff;
+    border-color: white;
+}
+
+
+.sidebar {
+    width: 15%;
+    /*z-index: 999;*/
+    position: fixed;
+    top: 60px; /* Adjust the top position to match the height of the topbar */
+    bottom: 0;
+    left: -10%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.toggleButton {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    flex-grow: 1;
+}
+
+.navItem {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.navItem:hover {
+    background-color: #555;
+}
+
+

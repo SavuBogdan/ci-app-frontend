@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  node:
+    container_name: node
+    restart: always
+    user: ${UID}:${GID}
+    build:
+      context: .
+      dockerfile: ./docker/node/Dockerfile
+    volumes:
+      - code_frontend:/app
+    ports:
+      - "3000:3000"
+    networks:
+      app-network:
+#        ipv4_address: 172.16.238.4
+
+
+networks:
+  app-network:
+    external:
+      name: app-network
+
+
+volumes:
+  code_frontend:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./app
+      o: bind
